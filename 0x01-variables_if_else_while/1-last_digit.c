@@ -1,14 +1,11 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+#include <stdio.h>
 
 /**
- * main - the entry point of the program
+ * main - Prints a text according number
  *
- * Return: returns 0 success
+ * Return: Always (Success)
  */
 int main(void)
 {
@@ -16,7 +13,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
 	lastNum = n % 10;
 
 	if (lastNum > 5)
@@ -31,5 +27,7 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastNum);
 	}
+
 	return (0);
 }
+
