@@ -8,5 +8,6 @@ void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
 int _sqrt_recursion(int n);
 int find_sqrt(int n, int root);
+int is_prime_number(int n);
 
 #endif /*MAIN_H*/
