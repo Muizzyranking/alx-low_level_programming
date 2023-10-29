@@ -1,6 +1,7 @@
 #include"dog.h"
 
 int _len(char *str);
+char *_strcpy(char *dest, char *src);
 
 /**
  * new_dog - creates a new dog
@@ -37,9 +38,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	dog->name = _cpy(doggo->name, name);
+	dog->name = _strcpy(dog->name, name);
 	dog->age = age;
-	dog->owner = _cpy(doggo->owner, owner);
+	dog->owner = _strcpy(dog->owner, owner);
 
 	return (dog);
 
@@ -61,17 +62,17 @@ int _len(char *str)
 }
 
 /**
- *_cpy - copy string pointed by src into dest variable
+ *_strcpy - copy string pointed by src into dest variable
 * @dest:buffer storing string copy
 * @src: buffer storing string to copy
 * Return:returns copied string
 */
-char *_cpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int index = 0;
 
-	while (src[index])
-		dest[index++] = src[index++];
+	while (src[index++])
+		dest[index] = src[index];
 
 	dest[index] = '\0';
 	return (dest);
