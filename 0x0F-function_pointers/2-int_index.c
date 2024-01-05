@@ -1,8 +1,3 @@
-/*
- * File: 2-int_index.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "function_pointers.h"
 
 /**
